@@ -1,0 +1,4 @@
+baseURL = "https://dittocafe.com/"
+languageCode = "zh-cn"
+title = "DittoCafe"
+theme = "PaperMod"
