@@ -22,7 +22,7 @@ jobs:
         uses: peaceiris/actions-hugo@v3
         with:
           # 关键修改：降级 Hugo 版本，完美解决刚才的 rss.xml 报错
-          hugo-version: '0.146.0'
+          hugo-version: 'latest'
           extended: true
           
       - name: Build
