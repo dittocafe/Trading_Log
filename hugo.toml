@@ -1,5 +1,40 @@
-[params]
-  description = "价格行为学 | AI 交易日志"
+baseURL = "https://dittocafe.com/"
+languageCode = "en-us"
+title = "价格行为学 | AI 交易日志"
+theme = "PaperMod"
+defaultContentLanguage = "en"
 
-  [params.author]
-    name = "Arch Life"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "价格行为学 | AI 交易日志"
+  description = "价格行为学 | AI 交易日志"
+  author = "Xihi"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "Archives"
+    url = "/archives/"
+    weight = 2
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
