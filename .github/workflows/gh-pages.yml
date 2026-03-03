@@ -1,49 +1,57 @@
-name: Deploy Hugo site to Pages
+baseURL = "https://dittocafe.com/"
+languageCode = "zh-cn"
+title = "价格行为学 | AI 交易日志"
+defaultContentLanguage = "zh"
 
-on:
-  push:
-    branches: ["master"]
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+[minify]
+  disableXML = true
+  minifyOutput = true
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+[params]
+  env = "production"
+  title = "价格行为学 | AI 交易日志"
+  description = "价格行为学 | AI 交易日志"
+  author = "Xihi"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  ShowTagsSection = true
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "Archives"
+    url = "/archives/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "搜索"
+    url = "/search/"
+    weight = 4
 
-      - name: Build
-        run: hugo --minify
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

@@ -1,7 +1,7 @@
 baseURL = "https://dittocafe.com/"
-languageCode = "en-us"
+languageCode = "zh-cn"
 title = "价格行为学 | AI 交易日志"
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh"
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -16,7 +16,7 @@ buildExpired = false
   env = "production"
   title = "价格行为学 | AI 交易日志"
   description = "价格行为学 | AI 交易日志"
-  author = "Arch Life"
+  author = "Xihi"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
@@ -24,6 +24,16 @@ buildExpired = false
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowToc = true
+  ShowTagsSection = true
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
 
 [menu]
   [[menu.main]]
@@ -34,6 +44,14 @@ buildExpired = false
     name = "Archives"
     url = "/archives/"
     weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "搜索"
+    url = "/search/"
+    weight = 4
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
