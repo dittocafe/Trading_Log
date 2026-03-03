@@ -1,14 +1,11 @@
 baseURL = "https://dittocafe.com/"
 languageCode = "zh-cn"
 title = "DittoCafe"
-theme = "PaperMod"
 
-# 👇 就是这几行解决了 rss.xml 的报错
 [author]
-    name = "DittoCafe"
+    name = "xihi"
 
 [params]
     env = "production"
     title = "DittoCafe ☕"
     description = "交易笔记与盘前情报"
-    author = "DittoCafe"
