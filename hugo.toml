@@ -2,3 +2,8 @@ baseURL = "https://dittocafe.com/"
 languageCode = "zh-cn"
 title = "DittoCafe"
 theme = "PaperMod"
+
+[params]
+    env = "production"
+    title = "DittoCafe ☕"
+    description = "交易笔记与盘前情报"
