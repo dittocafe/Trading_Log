@@ -1,7 +1,11 @@
 baseURL = "https://dittocafe.com/"
 languageCode = "zh-cn"
 title = "DittoCafe"
-theme = "PaperMod"
+
+# 关键修改：把 theme 删掉或者注释掉，改用 themesDir
+# 因为你现在的仓库根目录本身就是主题代码
+themesDir = "../"
+theme = "Trading_Log" 
 
 [params]
     env = "production"
