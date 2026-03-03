@@ -1,6 +1,6 @@
 baseURL = "https://dittocafe.com/"
 languageCode = "zh-cn"
-title = "价格行为学 | AI 交易日志"
+title = "价格行为学 | 交易日志"
 defaultContentLanguage = "zh"
 
 enableRobotsTXT = true
