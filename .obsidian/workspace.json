@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/First_Hello.md",
+                "file": "content/posts/V33B Protective Stops.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "First_Hello"
+              "title": "V33B Protective Stops"
             }
           }
         ]
@@ -183,7 +183,9 @@
   },
   "active": "dd3c3ec117cd4b5f",
   "lastOpenFiles": [
-    "content/posts/20260528.md",
+    "content/posts/20260303.md",
+    "content/posts/20260304.md",
+    "content/posts/V33B Protective Stops.md",
     "content/posts/First_Hello.md"
   ]
 }
