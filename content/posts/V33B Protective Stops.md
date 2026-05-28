@@ -1,7 +1,7 @@
 ---
-title: 课程笔记
-date: 2026-03-03
-description: 简短描述
+title: V33B Protective Stops
+date: 2026-05-28
+description: Al Brooks 价格行为学 33B 笔记
 tags:
   - 课程笔记
 weight:
