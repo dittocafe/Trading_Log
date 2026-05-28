@@ -3,6 +3,8 @@ languageCode = "zh-cn"
 title = "价格行为学 | 交易日志"
 defaultContentLanguage = "zh"
 
+googleAnalytics = "G-CRXQLYSX6R"
+
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
