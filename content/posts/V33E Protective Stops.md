@@ -1,7 +1,7 @@
 ---
 title: 课程 | V33E Protective Stops
 date: 2026-05-31
-description: 宽止损
+description: 止损：宽止损
 tags:
   - 课程笔记
 weight:

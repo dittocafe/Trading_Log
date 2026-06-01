@@ -1,7 +1,7 @@
 ---
 title: 课程 | V33D Protective Stops
 date: 2026-05-31
-description: Al Brooks 价格行为学 33D 笔记
+description: 止损：尊重主要的回调，如果进场的setup不再成立就离场
 tags:
   - 课程笔记
 weight:
