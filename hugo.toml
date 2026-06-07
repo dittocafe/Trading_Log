@@ -16,17 +16,29 @@ buildExpired = false
 
 [params]
   env = "production"
-  title = "价格行为学 | AI 交易日志"
-  description = "价格行为学 | AI 交易日志"
+  title = "DittoCafe"
+  description = "A quiet portal connecting independent projects on trading and essays."
   author = "Xihi"
   defaultTheme = "auto"
+
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
-  ShowToc = true
-  ShowTagsSection = true
+  ShowToc = false
+  ShowTagsSection = false
+
+  [params.homeInfoParams]
+    Title = "DittoCafe"
+    Content = """
+A quiet portal for trading and essays.
+
+- [Trading](https://trading.dittocafe.com)
+- [Essays](https://essays.dittocafe.com)
+
+Built slowly, kept simple.
+"""
 
   [params.fuseOpts]
     isCaseSensitive = false
@@ -39,21 +51,14 @@ buildExpired = false
 
 [menu]
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
+    name = "Trading"
+    url = "https://trading.dittocafe.com"
     weight = 1
+
   [[menu.main]]
-    name = "Archives"
-    url = "/archives/"
+    name = "Essays"
+    url = "https://essays.dittocafe.com"
     weight = 2
-  [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 3
-  [[menu.main]]
-    name = "搜索"
-    url = "/search/"
-    weight = 4
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
