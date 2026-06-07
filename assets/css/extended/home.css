@@ -6,7 +6,7 @@
 
 .portal-intro {
   max-width: 760px;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2.2rem;
 }
 
 .portal-intro h1 {
@@ -16,21 +16,9 @@
 }
 
 .portal-intro p {
+  margin: 0;
   font-size: 1.12rem;
   line-height: 1.85;
-  color: var(--secondary);
-}
-
-.portal-current {
-  max-width: 760px;
-  margin-bottom: 2.5rem;
-  padding-left: 0.2rem;
-}
-
-.portal-current p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.8;
   color: var(--secondary);
 }
 
@@ -38,6 +26,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  margin-bottom: 2.4rem;
 }
 
 .portal-card {
@@ -67,15 +56,25 @@
   line-height: 1.75;
 }
 
+.portal-notes {
+  max-width: 760px;
+}
+
+.portal-notes h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.portal-notes p {
+  margin: 0 0 0.9rem;
+  color: var(--secondary);
+  line-height: 1.8;
+}
+
 @media (min-width: 860px) {
   .portal-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1240px) {
-  .portal-grid.portal-grid-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -89,7 +88,7 @@
   }
 
   .portal-intro p,
-  .portal-current p,
+  .portal-notes p,
   .portal-card p {
     font-size: 0.98rem;
   }

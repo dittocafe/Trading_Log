@@ -1,16 +1,8 @@
 {{ define "main" }}
 <div class="portal-home">
   <section class="portal-intro">
-    <h1>DittoCafe</h1>
-    <p>
-      A quiet portal for ongoing projects in trading, writing, and other slow work.
-    </p>
-  </section>
-
-  <section class="portal-current">
-    <p>
-      Recently: trading notes have moved to a dedicated project, while the main site is being simplified into a calmer front door.
-    </p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.intro }}</p>
   </section>
 
   <section class="portal-grid">
@@ -23,6 +15,12 @@
       <h2>Essays</h2>
       <p>Low-frequency writing on AI, tools, and other ongoing thoughts.</p>
     </a>
+  </section>
+
+  <section class="portal-notes">
+    <h2>{{ .Params.recent_title }}</h2>
+    <p>{{ .Params.recent_1 }}</p>
+    <p>{{ .Params.recent_2 }}</p>
   </section>
 </div>
 {{ end }}
