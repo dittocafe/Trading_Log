@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/First_Hello.md",
+                "file": "content/_index.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "First_Hello"
+              "title": "_index"
             }
           }
         ]
@@ -183,9 +183,9 @@
   },
   "active": "dd3c3ec117cd4b5f",
   "lastOpenFiles": [
+    "content/posts/First_Hello.md",
     "content/_index.md.md",
     "content/_index.md",
-    "content/posts/First_Hello.md",
     "layouts/index.html",
     "layouts/index.html.txt",
     "layouts/新建 文本文档.txt",
