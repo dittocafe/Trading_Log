@@ -1,59 +1,96 @@
-.first-entry {
-  max-width: 920px;
-  margin: 4rem auto 3rem;
-  padding: 2.2rem 2.4rem;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: var(--entry);
+.portal-home {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
 }
 
-.first-entry .entry-header h1 {
+.portal-intro {
+  max-width: 760px;
+  margin-bottom: 1.75rem;
+}
+
+.portal-intro h1 {
   font-size: 3rem;
   line-height: 1.15;
   margin-bottom: 1rem;
 }
 
-.first-entry .entry-content {
-  font-size: 1.1rem;
-  line-height: 1.9;
+.portal-intro p {
+  font-size: 1.12rem;
+  line-height: 1.85;
   color: var(--secondary);
 }
 
-.first-entry .entry-content p {
-  margin-bottom: 1rem;
+.portal-current {
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+  padding-left: 0.2rem;
 }
 
-.first-entry .entry-content ul {
-  margin: 1.2rem 0 1.2rem 1.2rem;
-  padding: 0;
+.portal-current p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--secondary);
 }
 
-.first-entry .entry-content li {
-  margin-bottom: 0.8rem;
+.portal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-.first-entry .entry-content a {
-  font-weight: 600;
-  color: var(--primary);
+.portal-card {
+  display: block;
+  padding: 1.4rem 1.4rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--entry);
   text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
-.first-entry .entry-content a:hover {
-  text-decoration: underline;
+.portal-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.portal-card h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.portal-card p {
+  margin: 0;
+  color: var(--secondary);
+  line-height: 1.75;
+}
+
+@media (min-width: 860px) {
+  .portal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1240px) {
+  .portal-grid.portal-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
-  .first-entry {
-    margin: 2rem 1rem;
-    padding: 1.5rem 1.25rem;
+  .portal-home {
+    padding: 2.4rem 1rem 3.2rem;
   }
 
-  .first-entry .entry-header h1 {
-    font-size: 2.2rem;
+  .portal-intro h1 {
+    font-size: 2.25rem;
   }
 
-  .first-entry .entry-content {
-    font-size: 1rem;
-    line-height: 1.75;
+  .portal-intro p,
+  .portal-current p,
+  .portal-card p {
+    font-size: 0.98rem;
   }
 }
