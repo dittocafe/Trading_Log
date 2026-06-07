@@ -183,6 +183,8 @@
   },
   "active": "dd3c3ec117cd4b5f",
   "lastOpenFiles": [
+    "assets/css/extended/home.css",
+    "assets/css/extended/新建 文本文档.txt",
     "content/posts/V33A Protective Stops.md",
     "content/posts/First_Hello.md",
     "content/posts/20260303.md",
@@ -198,7 +200,6 @@
     "layouts/shortcodes",
     "layouts/search.html",
     "layouts/robots.txt",
-    "layouts/partials/templates/_funcs/get-page-images.html",
     "content/search.md",
     "content/posts/V34B Actual Risk.md",
     "content/posts/V34A Actual Risk.md",
