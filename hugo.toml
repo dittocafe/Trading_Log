@@ -9,6 +9,7 @@ enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
+hiddenInHomeList: true
 
 [minify]
   disableXML = true
