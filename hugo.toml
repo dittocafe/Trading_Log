@@ -34,14 +34,15 @@ buildExpired = false
   Content = """
 A quiet portal for trading and essays.
 
-Trading  
+[Trading](https://trading.dittocafe.com)  
 Price action, reviews, playbooks, and trading notes.
 
-Essays  
+[Essays](https://essays.dittocafe.com)  
 Low-frequency writing on AI, tools, and other ongoing thoughts.
 
 Built slowly, kept simple.
 """
+
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
