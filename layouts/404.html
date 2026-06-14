@@ -1,3 +1,41 @@
-{{- define "main" }}
-<div class="not-found">404</div>
-{{- end }}{{/* end main */ -}}
+{{ define "main" }}
+<div class="not-found" style="text-align: center; padding: 40px 20px; margin: 8% auto max-content auto; max-width: 650px;">
+    <h1 style="font-size: 5rem; font-weight: 800; margin-bottom: 5px; color: var(--primary);">404</h1>
+    
+    <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 5px; opacity: 0.9;">
+        抱歉，你访问的赛博页面发生了解析突破，查无此人。
+    </h2>
+    <h3 style="font-size: 1.1rem; font-weight: 400; margin-bottom: 35px; opacity: 0.6; font-style: italic;">
+        Oops! The page you are looking for has experienced a false breakout and cannot be found.
+    </h3>
+
+    <div class="navigation-links" style="margin: 35px 0; text-align: left; background: var(--code-bg); padding: 25px; border-radius: 8px; border: 1px solid var(--border);">
+        <div style="margin-bottom: 20px;">
+            <p style="margin: 0; font-size: 1.1rem; font-weight: 600; line-height: 1.6;">
+                🔗 返回大本营 / Back to Main Site：
+            </p>
+            <p style="margin: 2px 0 0 0; font-size: 1.05rem;">
+                <a href="https://dittocafe.com" style="color: var(--primary); text-decoration: underline; font-weight: 600;">dittocafe.com</a>
+            </p>
+        </div>
+        
+        <div>
+            <p style="margin: 0; font-size: 1.1rem; font-weight: 600; line-height: 1.6;">
+                📈 价格行为学（交易日志专区） / Price Action (Trading Log)：
+            </p>
+            <p style="margin: 2px 0 0 0; font-size: 1.05rem;">
+                <a href="https://trading.dittocafe.com" style="color: var(--primary); text-decoration: underline; font-weight: 600;">trading.dittocafe.com</a>
+            </p>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; line-height: 1.6;">
+        <p style="font-size: 1rem; opacity: 0.5; font-weight: 500; margin: 0;">
+            ☕ 其他内容敬请期待...
+        </p>
+        <p style="font-size: 0.9rem; opacity: 0.4; font-style: italic; margin: 2px 0 0 0;">
+            More content is on the way, stay tuned...
+        </p>
+    </div>
+</div>
+{{ end }}

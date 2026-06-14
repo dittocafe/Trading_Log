@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/posts/First_Hello.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "_index"
+              "title": "First_Hello"
             }
           }
         ]
@@ -181,11 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dd3c3ec117cd4b5f",
+  "active": "316f489a30d06548",
   "lastOpenFiles": [
+    "content/_index.md",
     "content/posts/First_Hello.md",
     "content/_index.md.md",
-    "content/_index.md",
     "layouts/index.html",
     "layouts/index.html.txt",
     "layouts/新建 文本文档.txt",
