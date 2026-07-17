@@ -37,8 +37,8 @@ A quiet portal for trading and essays.
 [Trading](https://trading.dittocafe.com)  
 Price action, reviews, playbooks, and trading notes.
 
-[Essays](https://essays.dittocafe.com)  
-Low-frequency writing on AI, tools, and other ongoing thoughts.
+[Memos](https://memos.dittocafe.com)  
+Thoughts on the go—about investing, trading, and AI.
 
 Built slowly, kept simple.
 """
@@ -59,8 +59,8 @@ Built slowly, kept simple.
     weight = 1
 
   [[menu.main]]
-    name = "Essays"
-    url = "https://essays.dittocafe.com"
+    name = "Memos"
+    url = "https://memos.dittocafe.com"
     weight = 2
 
 [outputs]
