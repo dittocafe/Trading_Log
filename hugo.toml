@@ -21,6 +21,11 @@ buildExpired = false
   author = "Xihi"
   defaultTheme = "auto"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # 允许在 Markdown 中渲染 HTML/链接
+
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
