@@ -14,18 +14,19 @@ buildExpired = false
   disableXML = true
   minifyOutput = true
 
-[params]
-  env = "production"
-  title = "DittoCafe"
-  description = "A quiet portal connecting independent projects on trading and essays."
-  author = "Xihi"
-  defaultTheme = "auto"
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true # 允许在 Markdown 中渲染 HTML/链接
 
+[params]
+  env = "production"
+  title = "DittoCafe"
+  description = "A quiet portal connecting independent projects on trading and memos." # 💡 这里顺手把 essays 改为了 memos
+  author = "Xihi"
+  defaultTheme = "auto"
+
+  # 💡 将这些 Show 开头的参数统一收录在 [params] 正下方，确保它们正确生效
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -33,20 +34,6 @@ buildExpired = false
   ShowCodeCopyButtons = true
   ShowToc = false
   ShowTagsSection = false
-
-[params.homeInfoParams]
-  Title = "DittoCafe"
-  Content = """
-A quiet portal for trading and memos.
-
-[Trading](https://trading.dittocafe.com)  
-Price action, reviews, playbooks, and trading notes.
-
-[Memos](https://memos.dittocafe.com)  
-Thoughts on the go—about investing, trading, and AI.
-
-Built slowly, kept simple.
-"""
 
   [params.fuseOpts]
     isCaseSensitive = false

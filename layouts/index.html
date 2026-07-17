@@ -1,3 +1,37 @@
 {{ define "main" }}
-    {{ partial "home_info.html" . }}
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">DittoCafe.com</h1>
+  </header>
+  
+  <div class="post-content">
+    <!-- 引入你的顶部介绍 -->
+    <p>{{ .Site.Params.description }}</p>
+    
+    <br>
+    
+    <!-- 精美双卡片布局布局 -->
+    <div style="display: flex; gap: 20px; margin: 25px 0; flex-wrap: wrap;">
+      
+      <!-- 卡片 1: Trading -->
+      <a href="https://trading.dittocafe.com" style="flex: 1; min-width: 280px; padding: 20px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; background: var(--entry); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+        <h3 style="margin-top: 0; margin-bottom: 10px; font-size: 1.3rem; color: var(--primary);">Trading</h3>
+        <p style="font-size: 0.95rem; opacity: 0.8; margin: 0; line-height: 1.5;">价格行为、复盘、playbook，以及持续整理中的交易笔记。 / Price action, reviews, playbooks, and trading notes.</p>
+      </a>
+
+      <!-- 卡片 2: Memos -->
+      <a href="https://memos.dittocafe.com" style="flex: 1; min-width: 280px; padding: 20px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; background: var(--entry); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+        <h3 style="margin-top: 0; margin-bottom: 10px; font-size: 1.3rem; color: var(--primary);">Memos</h3>
+        <p style="font-size: 0.95rem; opacity: 0.8; margin: 0; line-height: 1.5;">随时随地的想法，有关投资、交易、AI。 / Thoughts on the go—about investing, trading, and AI.</p>
+      </a>
+
+    </div>
+
+    <!-- 底部最近更新动态 -->
+    <h3 style="margin-top: 40px; border-bottom: 1px solid var(--border); padding-bottom: 8px;">最近 / Recent</h3>
+    <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9;">Trading 已经迁移到独立子域名，并会继续在那边更新与整理，构建的过程促使思路更清晰。 / Trading has moved to its own subdomain, where it will continue to be updated and refined; the process of building it has also made the underlying ideas clearer.</p>
+    <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9;">DittoCafe 正在逐步架构一个新的空间，用来连接已经存在的已有项目。 / DittoCafe is gradually taking shape as a new space for connecting projects that already exist.</p>
+
+  </div>
+</article>
 {{ end }}

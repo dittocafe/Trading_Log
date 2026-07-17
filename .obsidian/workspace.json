@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/archives.md",
+                "file": "content/about.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "archives"
+              "title": "about"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "dd3c3ec117cd4b5f",
   "lastOpenFiles": [
+    "content/archives.md",
     "content/about.md",
     "content/posts/First_Hello.md",
     "layouts/index.html",
@@ -190,7 +191,6 @@
     "layouts/bakindex.html",
     "content/_index.md",
     "layouts/_default/baklist.html",
-    "content/archives.md",
     "content/search.md",
     "README.md",
     "content/_index.md.md",
