@@ -177,18 +177,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dd3c3ec117cd4b5f",
+  "active": "316f489a30d06548",
   "lastOpenFiles": [
+    "layouts/index.html",
+    "layouts/bakindex - 副本.html",
+    "layouts/bakindex.html",
     "content/_index.md",
     "content/about.md",
     "layouts/_default/baklist.html",
-    "layouts/bakindex.html",
     "content/archives.md",
     "content/search.md",
     "README.md",
     "content/posts/First_Hello.md",
     "content/_index.md.md",
-    "layouts/index.html",
     "layouts/index.html.txt",
     "layouts/新建 文本文档.txt",
     "assets/css/extended/home.css",
@@ -214,7 +215,6 @@
     "content/layout/index.html.md",
     "backup/content/posts/V34B Actual Risk.md",
     "backup/content/posts/V34A Actual Risk.md",
-    "backup/content/posts/V33G Protective Stops.md",
     "images/screenshot.png",
     "images/tn.png"
   ]
