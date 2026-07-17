@@ -32,7 +32,7 @@ buildExpired = false
 [params.homeInfoParams]
   Title = "DittoCafe"
   Content = """
-A quiet portal for trading and essays.
+A quiet portal for trading and memos.
 
 [Trading](https://trading.dittocafe.com)  
 Price action, reviews, playbooks, and trading notes.
