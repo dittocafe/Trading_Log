@@ -55,5 +55,10 @@ buildExpired = false
     url = "https://memos.dittocafe.com"
     weight = 2
 
+  [[menu.main]]
+    name = "Buffett Letters"
+    url = "/buffettletter/"
+    weight = 3
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
