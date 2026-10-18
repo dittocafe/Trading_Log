@@ -38,13 +38,14 @@ buildExpired = false
   ShowTagsSection = false
 
   [params.assets]
-    favicon = "/images/ditto-logo.png"
-    favicon16x16 = "/images/ditto-logo.png"
-    favicon32x32 = "/images/ditto-logo.png"
-    apple_touch_icon = "/images/ditto-logo.png"
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+    apple_touch_icon = "/apple-touch-icon.png"
 
   [params.schema]
     publisherType = "Organization"
+    publisherLogo = "/images/ditto-logo-512.png"
 
 [frontmatter]
   lastmod = [":git", "lastmod"]
