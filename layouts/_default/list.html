@@ -1,6 +1,7 @@
 {{- define "main" }}
 
 <header class="page-header">
+  {{ partial "breadcrumbs.html" . }}
   <h1>{{ .Title }}</h1>
   {{- with .Description }}
   <div class="post-description">{{ . }}</div>
@@ -11,16 +12,54 @@
 <div class="post-content">{{ . }}</div>
 {{- end }}
 
+{{- if eq .Section "buffettletter" }}
+{{- $pages := .RegularPages }}
+<nav class="letter-period-nav" aria-label="按时期浏览">
+  <strong>按时期浏览</strong>
+  <a href="#abel">2025 格雷格·阿贝尔</a>
+  <a href="#berkshire">1977–2024 伯克希尔股东信</a>
+  <a href="#early">1970–1976 早期信件</a>
+  <a href="#partnership">1957–1969 合伙人信</a>
+</nav>
+
+{{- $groups := slice
+  (dict "id" "abel" "title" "格雷格·阿贝尔年度股东信" "description" "2025 财年起，由伯克希尔首席执行官 Greg Abel 撰写。" "min" 2025 "max" 2025)
+  (dict "id" "berkshire" "title" "伯克希尔·哈撒韦年度股东信" "description" "沃伦·巴菲特写给伯克希尔股东的年度信件。" "min" 1977 "max" 2024)
+  (dict "id" "early" "title" "早期信件" "description" "1970—1976 年的中文整理档案。" "min" 1970 "max" 1976)
+  (dict "id" "partnership" "title" "巴菲特合伙人信" "description" "1957—1969 年巴菲特合伙企业时期的年度信件。" "min" 1957 "max" 1969)
+-}}
+
+{{- range $groups }}
+{{- $group := . }}
+<section class="letter-period" id="{{ $group.id }}">
+  <header>
+    <h2>{{ $group.title }}</h2>
+    <p>{{ $group.description }}</p>
+  </header>
+  <div class="letter-grid">
+    {{- range sort $pages "Params.fiscalYear" "desc" }}
+      {{- $year := int (.Params.fiscalYear | default 0) }}
+      {{- if and (ge $year $group.min) (le $year $group.max) }}
+      <article class="letter-card">
+        <h3>{{ $year }} 年</h3>
+        <p>{{ .Description }}</p>
+        <span>{{ .Params.originalAuthor | default "Warren E. Buffett" }} · 中文整理</span>
+        <a class="entry-link" aria-label="阅读 {{ $year }} 年信件" href="{{ .RelPermalink }}"></a>
+      </article>
+      {{- end }}
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- else }}
 {{- range .RegularPages.ByDate }}
 <article class="post-entry">
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">{{ .Title }}</h2>
-  </header>
-  {{- with .Description }}
-  <div class="entry-content"><p>{{ . }}</p></div>
-  {{- end }}
+  <header class="entry-header"><h2 class="entry-hint-parent">{{ .Title }}</h2></header>
+  {{- with .Description }}<div class="entry-content"><p>{{ . }}</p></div>{{- end }}
   <a class="entry-link" aria-label="打开 {{ .Title }}" href="{{ .RelPermalink }}"></a>
 </article>
+{{- end }}
 {{- end }}
 
 {{- end }}

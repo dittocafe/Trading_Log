@@ -49,6 +49,11 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
+    {{- if eq .Section "buffettletter" }}
+    <nav class="letter-archive-link" aria-label="返回年份档案">
+      <a href="{{ "/buffettletter/" | relURL }}">查看全部年份与时期索引</a>
+    </nav>
+    {{- end }}
   </div>
   {{- end }}
 

@@ -59,6 +59,32 @@
   ]
 }
 </script>
+{{- if and .IsSection (eq .Section "buffettletter") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ .Title }},
+  "description": {{ .Description }},
+  "url": {{ .Permalink }},
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ len .RegularPages }},
+    "itemListElement": [
+      {{- range $index, $page := sort .RegularPages "Params.fiscalYear" "desc" }}
+      {{- if $index }},{{ end }}
+      {
+        "@type": "ListItem",
+        "position": {{ add $index 1 }},
+        "name": {{ $page.Params.seoTitle | default $page.Title }},
+        "url": {{ $page.Permalink }}
+      }
+      {{- end }}
+    ]
+  }
+}
+</script>
+{{- end }}
 {{- if .IsPage }}
 <script type="application/ld+json">
 {
