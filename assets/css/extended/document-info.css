@@ -1,0 +1,20 @@
+.document-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin: 0 0 2rem;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--primary);
+  background: var(--code-bg);
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.document-info strong {
+  color: var(--primary);
+}
+
+.document-info a {
+  color: var(--primary);
+  text-decoration: underline;
+}

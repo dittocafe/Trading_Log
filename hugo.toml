@@ -2,6 +2,7 @@ baseURL = "https://dittocafe.com/"
 languageCode = "zh-cn"
 title = "DittoCafe"
 defaultContentLanguage = "zh"
+enableGitInfo = true
 
 googleAnalytics = "G-CRXQLYSX6R"
 
@@ -22,8 +23,9 @@ buildExpired = false
 [params]
   env = "production"
   title = "DittoCafe"
-  description = "A quiet portal connecting independent projects on trading and memos." # 💡 这里顺手把 essays 改为了 memos
+  description = "DittoCafe 收录巴菲特与伯克希尔·哈撒韦历年股东信中文译本，以及交易与投资笔记。"
   author = "Xihi"
+  images = ["/images/buffett-letters-og.png"]
   defaultTheme = "auto"
 
   # 💡 将这些 Show 开头的参数统一收录在 [params] 正下方，确保它们正确生效
@@ -34,6 +36,18 @@ buildExpired = false
   ShowCodeCopyButtons = true
   ShowToc = false
   ShowTagsSection = false
+
+  [params.assets]
+    favicon = "/images/ditto-logo.png"
+    favicon16x16 = "/images/ditto-logo.png"
+    favicon32x32 = "/images/ditto-logo.png"
+    apple_touch_icon = "/images/ditto-logo.png"
+
+  [params.schema]
+    publisherType = "Organization"
+
+[frontmatter]
+  lastmod = [":git", "lastmod"]
 
   [params.fuseOpts]
     isCaseSensitive = false

@@ -1,6 +1,11 @@
 {{- $scratch := newScratch }}
 
-{{- if not .Date.IsZero -}}
+{{- if and .IsPage (eq .Section "buffettletter") .Params.fiscalYear -}}
+{{- $scratch.Add "meta" (slice (printf "<span>财年 %v</span>" .Params.fiscalYear)) }}
+{{- with .Lastmod -}}
+{{- $scratch.Add "meta" (slice (printf "<span title='%s'>更新于 %s</span>" . (. | time.Format "2006-01-02"))) }}
+{{- end -}}
+{{- else if not .Date.IsZero -}}
 {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
 {{- end }}
 
@@ -12,7 +17,7 @@
 {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "words" .WordCount | default (printf "%d words" .WordCount)))) }}
 {{- end }}
 
-{{- if not (.Param "hideAuthor") -}}
+{{- if and (not (.Param "hideAuthor")) (not (and .IsPage (eq .Section "buffettletter"))) -}}
 {{- with (partial "author.html" .) }}
 {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" .)) }}
 {{- end }}

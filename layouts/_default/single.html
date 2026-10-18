@@ -36,6 +36,16 @@
 
   {{- if .Content }}
   <div class="post-content">
+    {{- if and (eq .Section "buffettletter") .Params.fiscalYear }}
+    <aside class="document-info" aria-label="文档信息">
+      <strong>文档信息</strong>
+      <span>原文作者：{{ .Params.originalAuthor | default "Warren E. Buffett" }}</span>
+      <span>报告财年：{{ .Params.fiscalYear }}</span>
+      {{- with .Params.originalPublished }}<span>原文发布日期：{{ . | time.Format "2006-01-02" }}</span>{{ end }}
+      <span>中文整理：{{ .Params.translator | default "DittoCafe" }}</span>
+      {{- with .Params.sourceURL }}<span><a href="{{ . }}" rel="source">官方原文</a></span>{{ end }}
+    </aside>
+    {{- end }}
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}

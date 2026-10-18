@@ -64,8 +64,8 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": {{ .Title | plainify}},
-  "name": "{{ .Title | plainify }}",
+  "headline": {{ with .Params.seoTitle }}{{ . | plainify }}{{ else }}{{ .Description | default .Title | plainify }}{{ end }},
+  "name": {{ with .Params.seoTitle }}{{ . | plainify }}{{ else }}{{ .Description | default .Title | plainify }}{{ end }},
   "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify  }}{{ end -}},
   "keywords": [
     {{- if .Params.keywords }}
@@ -90,9 +90,11 @@
   "image": {{ .Permalink }},
     {{- end }}
   {{- end -}}
-  "datePublished": {{ .PublishDate }},
+  {{- with .Params.originalPublished }}
+  "datePublished": {{ . }},
+  {{- end }}
   "dateModified": {{ .Lastmod }},
-  {{- with (.Params.author | default site.Params.author) }}
+  {{- with (.Params.originalAuthor | default .Params.author | default site.Params.author) }}
   "author":
     {{- if (or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}")) -}}
   [{{- range $i, $v := . -}}
@@ -108,6 +110,17 @@
     "name": {{ . }}
   },
     {{- end -}}
+  {{- end }}
+  {{- with .Params.translator }}
+  "translator": {
+    "@type": "Organization",
+    "name": {{ . }},
+    "url": {{ site.Home.Permalink }}
+  },
+  {{- end }}
+  {{- with .Params.sourceURL }}
+  "isBasedOn": {{ . }},
+  "citation": {{ . }},
   {{- end }}
   "mainEntityOfPage": {
     "@type": "WebPage",

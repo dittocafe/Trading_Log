@@ -1,0 +1,11 @@
+{{- if .IsHome -}}
+  {{- site.Title -}}
+{{- else if .Params.seoTitle -}}
+  {{- printf "%s | %s" .Params.seoTitle site.Title -}}
+{{- else if and .IsPage (eq .Section "buffettletter") .Description -}}
+  {{- printf "%s | %s" .Description site.Title -}}
+{{- else if .Title -}}
+  {{- printf "%s | %s" .Title site.Title -}}
+{{- else -}}
+  {{- site.Title -}}
+{{- end -}}
